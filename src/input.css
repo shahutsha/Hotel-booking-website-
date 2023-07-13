@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html{
+    font-size: 62.5%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+@media (max-widh:600px){
+    html{
+        font-size: 55%;
+    }
+}
+
+@layer components{
+    .snap-feature{
+        @apply snap-y snap-mandatory h-screen overflow-scroll transition-all duration-500;
+    }
+    .nav-bar{
+        @apply flex justify-between w-full fixed top-0 z-10 h-28 px-10 items-center;
+    }
+    .nav-items{
+        @apply text-2xl font-semibold text-slate-100 py-2 px-5 rounded-[1.2rem] bg-transparent duration-500 hover:bg-slate-400 hover:bg-opacity-40;
+    }
+
+    .hero-section{
+        @apply w-full h-screen  object-cover;
+    }
+    .hero-btn{
+        @apply absolute bottom-[40%] md:bottom-[8%] bg-transparent left-[50%] translate-x-[-50%] translate-y-[-50%] text-center flex flex-col md:flex-row;
+    }
+    .car-section{
+        @apply w-full h-screen snap-start snap-always ;
+    }
+    .car-img{
+        @apply w-full h-full object-cover;
+    }
+
+    .car-details{
+        @apply absolute top-[25%] md:top-[22%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-center;
+    }
+    .car-name{
+        @apply text-[2.8rem] md:text-[4rem] text-slate-950 font-semibold;
+    }
+    .car-tagline{
+        @apply text-[1.4rem] md:text-[1.2rem] text-slate-800;
+    }
+    .car-button {
+        @apply absolute bottom-[1%] md:bottom-[8%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-center flex flex-col md:flex-row;
+    }
+    .btn{
+        @apply inline-block text-xl text-white bg-zinc-700 px-10 pt-5 mx-2 my-2 text-center font-medium rounded-[5px] uppercase w-[25rem] h-16;
+    }
+    .inventory{
+        @apply text-black bg-stone-100;
+    }
+    .down-arrow{
+        @apply absolute bottom-[1%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-center;
+       
+    }
+    /* .footer-section{
+        @apply flex w-full   h-14 px-10 items-center justify-center;
+    }
+    .footer-item{
+        @apply text-2xl text-slate-700 px-2 font-medium text-[12px] text-center;
+    } */
+}
